@@ -1,0 +1,8 @@
+SetEnvIf Referer plpkegiatan.local internal
+#
+<Files *>
+order Deny,Allow
+Deny from all
+Allow from env=internal
+ErrorDocument 403 /forbiden
+</Files> 
